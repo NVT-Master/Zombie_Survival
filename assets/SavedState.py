@@ -1,16 +1,4 @@
-from dataclasses import dataclass
+﻿"""Backward compatibility wrapper."""
 
-from typing import List, TYPE_CHECKING
-if TYPE_CHECKING:
-    from assets.Vectors import Vector2
+from assets.utils.SavedState import *
 
-
-@dataclass
-class SavedState:
-    score: int
-    hearts: int
-    targetNumZombies: float
-    playerPosition: "Vector2"
-    zombiePositions: List["Vector2"]
-    zombieHearts: List[int]
-    controls: List[str]
