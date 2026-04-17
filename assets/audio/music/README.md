@@ -1,15 +1,22 @@
-# Audio Files Directory
+# Music Directory
 
-Add background music files here (MP3, WAV, OGG, FLAC supported).
+Put background music files in this folder.
 
-Recommended music files for each difficulty:
-- `menu_music.mp3` - Menu background music
-- `wave_1_easy.mp3` - Easy mode Wave 1
-- `wave_1_normal.mp3` - Normal mode music
-- `boss_music.mp3` - Boss fight music
-- `victory_music.mp3` - Victory theme
+The game currently looks for these names:
+- menu_music.mp3 (main menu)
+- wave_music.mp3 (normal gameplay waves)
+- boss_music.mp3 (boss approach/spawn)
 
-Note: Requires pygame to be installed for audio playback:
+Supported formats by resolver:
+- .mp3
+- .wav
+
+Tips:
+- Keep music length reasonable for loop transitions.
+- Use consistent loudness between tracks to avoid volume jumps.
+
+Audio playback requires pygame:
+
 ```bash
 pip install pygame
 ```

@@ -1,24 +1,31 @@
 # Sound Effects Directory
 
-Add sound effect files here (WAV recommended for low latency).
+Put SFX files in this folder.
 
-Recommended sound effects:
-- `shoot_handgun.wav` - Handgun shot sound
-- `shoot_shotgun.wav` - Shotgun shot sound
-- `shoot_rifle.wav` - AK/rifle shot sound
-- `zombie_hit.wav` - Zombie takes damage
-- `zombie_death.wav` - Zombie dies
-- `player_hit.wav` - Player takes damage
-- `dash.wav` - Player dash sound
-- `bomb_explode.wav` - Bomber zombie explosion
-- `barricade_hit.wav` - Barricade takes damage (optional)
-- `barricade_break.wav` - Barricade breaks (optional)
+Main SFX names used by the game:
+- shoot_handgun.wav
+- shoot_shotgun.wav
+- shoot_rifle.wav
+- zombie_hit.wav
+- zombie_death.wav
+- player_hit.wav
+- dash.wav
+- bomb_explode.wav
 
-If barricade sound files are missing, the game will fallback to:
-- `zombie_hit.wav` for barricade hit
-- `bomb_explode.wav` for barricade break
+Optional SFX:
+- barricade_hit.wav
+- barricade_break.wav
 
-Note: Requires pygame to be installed for audio playback:
+Fallback behavior:
+- If barricade_hit.wav is missing, zombie_hit.wav can be used.
+- If barricade_break.wav is missing, bomb_explode.wav can be used.
+
+Format notes:
+- WAV is recommended for low-latency shots.
+- Keep files short and trimmed to reduce perceived delay.
+
+Audio playback requires pygame:
+
 ```bash
 pip install pygame
 ```
